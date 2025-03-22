@@ -16,10 +16,10 @@ struct ExploreView: View {
             
             
             if showDestinationSearchView {
-                DestinationSearchView(show: $showDestinationSearchView)
+                DestinationSearchView(show: $showDestinationSearchView, viewModel: viewModel)
             } else {
                 ScrollView {
-                    SearchAndFilterBar()
+                    SearchAndFilterBar(location: $viewModel.searchLocation)
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 showDestinationSearchView.toggle()
@@ -27,7 +27,7 @@ struct ExploreView: View {
                         }
                     
                     LazyVStack(spacing: 32) {
-                        ForEach(viewModel.listigns) { listing in
+                        ForEach(viewModel.listings) { listing in
                             NavigationLink(value: listing) {
                                 ListingItemView(listing: listing)
                                     .frame(height: 410)
