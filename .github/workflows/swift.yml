@@ -17,8 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run:  xcodebuild -project Airbnb.xcodeproj \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
+      run:  xcodebuild -project Airbnb.xcodeproj
     - name: Run tests
       run: swift test -v
