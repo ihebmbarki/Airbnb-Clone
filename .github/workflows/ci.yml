@@ -1,4 +1,4 @@
-name: iOS CI/CD Pipeline
+name: iOS CI
 
 on:
   push:
@@ -17,9 +17,10 @@ jobs:
       - name: Set up Xcode
         run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
 
-      - name: Build app
-        run: xcodebuild -workspace Airbnb-Clone.xcworkspace -scheme Airbnb-Clone -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build
-
-      - name: Run tests
-        run: xcodebuild test -workspace Airbnb-Clone.xcworkspace -scheme Airbnb-Clone -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2'
-
+      - name: Build and test
+        run: |
+          xcodebuild -project Airbnb-Clone.xcodeproj \
+            -scheme Airbnb-Clone \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
+            clean test
