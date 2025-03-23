@@ -17,11 +17,6 @@ jobs:
       - name: Set up Xcode
         run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
 
-      - name: Install dependencies
-        run: |
-          brew install cocoapods
-          pod install
-
       - name: Build app
         run: xcodebuild -workspace Airbnb-Clone.xcworkspace -scheme Airbnb-Clone -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build
 
