@@ -1,0 +1,30 @@
+name: iOS CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
+
+      - name: Install dependencies
+        run: |
+          brew install cocoapods
+          pod install
+
+      - name: Build app
+        run: xcodebuild -workspace Airbnb-Clone.xcworkspace -scheme Airbnb-Clone -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build
+
+      - name: Run tests
+        run: xcodebuild test -workspace Airbnb-Clone.xcworkspace -scheme Airbnb-Clone -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2'
+
