@@ -1,22 +1,29 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
-
-name: Swift
+name: CI Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
   build:
-
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run:  xcodebuild -project Airbnb.xcodeproj
-    - name: Run tests
-      run: swift test -v
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_14.1.app/Contents/Developer
+
+      - name: Install dependencies
+        run: |
+          # Commands to install any dependencies, if applicable
+          echo "No additional dependencies to install."
+
+      - name: Build project
+        run: xcodebuild -project Airbnb.xcodeproj -scheme Airbnb -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.0' build
+
+      - name: Run tests
+        run: xcodebuild test -project Airbnb.xcodeproj -scheme Airbnb -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.0'
