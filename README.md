@@ -14,42 +14,31 @@ A SwiftUI-based clone of the Airbnb app, built as a learning project to explore 
 - Map Integration: Browse listings on an interactive map.
 
 - Reusable Components: Built using modular, maintainable SwiftUI components.
-  
-## Tech Stack
-
-SwiftUI
-
-MVVM Architecture
-
-MapKit
-
-AsyncImage / Cached Images
-
-NavigationStack
-
-Reusable Components
-
-iOS 18-ready architecture
 
 ## Screenshots
 
 ### Home
-<img src="Screenshots/home.png" width="300"/>
+<img src="screenshots/home.png" width="300"/>
 
 ### Listings
-<img src="Screenshots/listing.png" width="300"/>
-<img src="Screenshots/listing2.png" width="300"/>
+<div style="display: flex; gap: 10px;">
+  <img src="screenshots/listing.png" width="300"/>
+  <img src="screenshots/listing2.png" width="300"/>
+</div>
 
 ### Search
-<img src="Screenshots/search.png" width="300"/>
-<img src="Screenshots/search2.png" width="300"/>
-<img src="Screenshots/search3.png" width="300"/>
+<div style="display: flex; gap: 10px;">
+  <img src="screenshots/search.png" width="300"/>
+  <img src="screenshots/search2.png" width="300"/>
+  <img src="screenshots/search3.png" width="300"/>
+</div>
 
 ### Profile
-<img src="Screenshots/profile.png" width="300"/>
+<img src="screenshots/profile.png" width="300"/>
 
 ### Wishlist
-<img src="Screenshots/wishlist.png" width="300"/>
+<img src="screenshots/wishlist.png" width="300"/>
+
 
 
 
