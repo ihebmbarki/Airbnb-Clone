@@ -18,7 +18,7 @@ A SwiftUI-based clone of the Airbnb app, built as a learning project to explore 
 ## Screenshots
 
 ### Home
-<img src="screenshots/home.png" width="300"/>
+<img src="Screenshots/home.png" width="300"/>
 
 ### Listings
 <div style="display: flex; gap: 10px;">
