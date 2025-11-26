@@ -34,23 +34,22 @@ iOS 18-ready architecture
 ## Screenshots
 
 ### Home
-![Home](Screenshots/home.png)
+<img src="Screenshots/home.png" width="300"/>
 
 ### Listings
-![Listings](Screenshots/listing.png)
-![Listings](Screenshots/listing2.png)
+<img src="Screenshots/listing.png" width="300"/>
+<img src="Screenshots/listing2.png" width="300"/>
 
 ### Search
-![Search](Screenshots/search.png)
-![Search](Screenshots/search2.png)
-![Search](Screenshots/search3.png)
+<img src="Screenshots/search.png" width="300"/>
+<img src="Screenshots/search2.png" width="300"/>
+<img src="Screenshots/search3.png" width="300"/>
 
 ### Profile
-![Profile](Screenshots/profile.png)
+<img src="Screenshots/profile.png" width="300"/>
 
 ### Wishlist
-![Wishlist](Screenshots/wishlist.png)
-
+<img src="Screenshots/wishlist.png" width="300"/>
 
 
 
