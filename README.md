@@ -22,22 +22,22 @@ A SwiftUI-based clone of the Airbnb app, built as a learning project to explore 
 
 ### Listings
 <div style="display: flex; gap: 10px;">
-  <img src="screenshots/listing.png" width="300"/>
-  <img src="screenshots/listing2.png" width="300"/>
+  <img src="Screenshots/listing.png" width="300"/>
+  <img src="Screenshots/listing2.png" width="300"/>
 </div>
 
 ### Search
 <div style="display: flex; gap: 10px;">
-  <img src="screenshots/search.png" width="300"/>
-  <img src="screenshots/search2.png" width="300"/>
-  <img src="screenshots/search3.png" width="300"/>
+  <img src="Screenshots/search.png" width="300"/>
+  <img src="Screenshots/search2.png" width="300"/>
+  <img src="Screenshots/search3.png" width="300"/>
 </div>
 
 ### Profile
-<img src="screenshots/profile.png" width="300"/>
+<img src="Screenshots/profile.png" width="300"/>
 
 ### Wishlist
-<img src="screenshots/wishlist.png" width="300"/>
+<img src="Screenshots/wishlist.png" width="300"/>
 
 
 
